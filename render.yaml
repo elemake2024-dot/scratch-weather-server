@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: weather-station
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: CITY_NAME
+        value: 東京
+      - key: LATITUDE
+        value: "35.6762"
+      - key: LONGITUDE
+        value: "139.6503"
+      - key: UPDATE_INTERVAL
+        value: "30"
